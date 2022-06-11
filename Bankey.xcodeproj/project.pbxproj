@@ -17,6 +17,7 @@
 		71D109B22705DD3B000A0633 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D109B12705DD3B000A0633 /* OnboardingViewController.swift */; };
 		71F770952710E99A0025AC04 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F770942710E99A0025AC04 /* LocalState.swift */; };
 		F7CF12832854A437005D211B /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF12822854A437005D211B /* UIViewController+Utils.swift */; };
+		F7CF12852854A65E005D211B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF12842854A65E005D211B /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		71D109B12705DD3B000A0633 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		71F770942710E99A0025AC04 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		F7CF12822854A437005D211B /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
+		F7CF12842854A65E005D211B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				71A0F7C326FD2B75008EAFD8 /* AppDelegate.swift */,
+				F7CF12842854A65E005D211B /* MainViewController.swift */,
 				71A0F7D926FD2C91008EAFD8 /* Login */,
 				717ADC0B2703B77F00C89FDB /* Onboarding */,
 				71F770932710E98E0025AC04 /* Util */,
@@ -187,6 +190,7 @@
 				713D9FFF270F216F00193EE6 /* DummyViewController.swift in Sources */,
 				71A0F7C426FD2B75008EAFD8 /* AppDelegate.swift in Sources */,
 				71A0F7D826FD2BBA008EAFD8 /* LoginView.swift in Sources */,
+				F7CF12852854A65E005D211B /* MainViewController.swift in Sources */,
 				71D109B22705DD3B000A0633 /* OnboardingViewController.swift in Sources */,
 				717ADC0D2703B80300C89FDB /* OnboardingContainerViewController.swift in Sources */,
 			);
