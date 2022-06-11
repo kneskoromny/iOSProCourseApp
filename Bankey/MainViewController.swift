@@ -32,14 +32,14 @@ class MainViewController: UITabBarController {
 
         viewControllers = tabBarList
     }
-    
+    // hide default navbar line
     private func hideNavigationBarLine(_ navigationBar: UINavigationBar) {
         let img = UIImage()
         navigationBar.shadowImage = img
         navigationBar.setBackgroundImage(img, for: .default)
         navigationBar.isTranslucent = false
     }
-    
+    // set translusent
     private func setupTabBar() {
         tabBar.tintColor = appColor
         tabBar.isTranslucent = false
