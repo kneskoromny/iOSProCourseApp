@@ -7,6 +7,7 @@
 
 import UIKit
 
+// для добавления логики после окончания онбординга
 protocol OnboardingContainerViewControllerDelegate: AnyObject {
     func didFinishOnboarding()
 }
@@ -18,7 +19,7 @@ class OnboardingContainerViewController: UIViewController {
 
     var pages = [UIViewController]()
     var currentVC: UIViewController
-
+// слабая ссылка на делегат
     weak var delegate: OnboardingContainerViewControllerDelegate?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -121,6 +122,7 @@ extension OnboardingContainerViewController: UIPageViewControllerDataSource {
 // MARK: Actions
 extension OnboardingContainerViewController {
     @objc func closeTapped(_ sender: UIButton) {
-        // TODO
+        // вызываем делегата 
+        delegate?.didFinishOnboarding()
     }
 }

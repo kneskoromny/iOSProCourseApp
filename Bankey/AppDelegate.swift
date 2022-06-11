@@ -7,6 +7,8 @@
 
 import UIKit
 
+let appColor = UIColor.systemTeal
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -21,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
         
+        // назначаем делегатом
         loginViewController.delegate = self
         onboardingViewController.delegate = self
         dummyViewController.logoutDelegate = self
@@ -35,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate {
+    // переход с анимацией
     func setRootViewController(_ vc: UIViewController, animated: Bool = true) {
         guard animated, let window = self.window else {
             self.window?.rootViewController = vc
@@ -51,8 +55,9 @@ extension AppDelegate {
                           completion: nil)
     }
 }
-
+// подписываем класс, который должен добавить какую-то логику после срабатывания делегата
 extension AppDelegate: LoginViewControllerDelegate {
+    // сообщаем, что хотим сделать когда делегат вызван
     func didLogin() {
         if LocalState.hasOnboarded {
             setRootViewController(dummyViewController)

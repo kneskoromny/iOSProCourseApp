@@ -6,11 +6,12 @@
 //
 
 import UIKit
-
+// для добавления логики при разлогине
 protocol LogoutDelegate: AnyObject {
     func didLogout()
 }
 
+// для добавления логики при логине
 protocol LoginViewControllerDelegate: AnyObject {
     func didLogin()
 }
@@ -24,6 +25,7 @@ class LoginViewController: UIViewController {
     let signInButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
     
+    // слабая ссылка на delegate
     weak var delegate: LoginViewControllerDelegate?
     
     var username: String? {
@@ -143,6 +145,7 @@ extension LoginViewController {
         
         if username == "" && password == "" {
             signInButton.configuration?.showsActivityIndicator = true
+            // сообщаем, что логин произошел
             delegate?.didLogin()
         } else {
             configureView(withMessage: "Incorrect username / password")
